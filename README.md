@@ -45,6 +45,11 @@ Contains a simple Python API service.
 - `requirements.txt` lists Python dependencies.
 - `Dockerfile` and `docker-compose.yml` for containerization.
 - `.env` for environment variables.
+- `.env` should look like this:
+```
+MINING_DUTCH_KEY = md#############
+WHATSONCHAIN_KEY = mainnet_#######
+```
 
 ### calculator
 A standalone calculator.

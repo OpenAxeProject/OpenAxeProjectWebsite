@@ -11,6 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 MINING_DUTCH_KEY = os.environ.get("MINING_DUTCH_KEY", "").strip()
+WHATSONCHAIN_KEY = os.environ.get("WHATSONCHAIN_KEY", "").strip()
 
 @app.route('/api/stats', methods=['GET'])
 def get_stats():
@@ -18,7 +19,6 @@ def get_stats():
     headers = {'User-Agent': 'SoloBlock-Proxy/1.0'}
     
     try:
-        # --- BTC & BCH ---
         if coin in ['BTC', 'BCH']:
             slug = "bitcoin" if coin == 'BTC' else "bitcoin-cash"
             r = requests.get(f"https://api.blockchair.com/{slug}/stats", headers=headers).json()
@@ -28,16 +28,17 @@ def get_stats():
                 "blocks": 144
             })
 
-        # --- BSV ---
         elif coin == 'BSV':
-            r = requests.get("https://api.whatsonchain.com/v1/bsv/main/chain/info", headers=headers).json()
+            bsv_headers = headers.copy()
+            if WHATSONCHAIN_API_KEY:
+                bsv_headers['woc-api-key'] = WHATSONCHAIN_API_KEY
+            
+            r = requests.get("https://api.whatsonchain.com/v1/bsv/main/chain/info", headers=bsv_headers).json()
             return jsonify({
                 "hash": float(r['hashrate']), 
                 "diff": float(r['difficulty']), 
                 "blocks": 144
             })
-
-        # --- BC2 ---
         elif coin == 'BC2':
             r = requests.get("https://bc2explorer.com/api/v1/live-diff", headers=headers).json()
             diff = float(r['difficulty'])
@@ -47,7 +48,6 @@ def get_stats():
                 "blocks": 144
             })
 
-        # --- Mining Dutch (DGB, FB, PPC) ---
         elif coin in ['DGB', 'FB', 'PPC']:
             pool_map = {'DGB': 'digibyte_sha256', 'FB': 'fractalbitcoin', 'PPC': 'peercoin'}
             
@@ -58,14 +58,10 @@ def get_stats():
             resp = requests.get(url, headers=headers)
             r = resp.json()
 
-            # --- PATH FIX HERE ---
-            # We drill down: getdashboarddata -> data -> network -> difficulty
             try:
-                # Some MD endpoints might differ, so we try the deep nest first
                 if 'getdashboarddata' in r:
                     network_data = r['getdashboarddata']['data']['network']
                 else:
-                    # Fallback for other MD coins that might use the old format
                     network_data = r.get('network', r.get('data', {}).get('network'))
 
                 if not network_data or 'difficulty' not in network_data:
@@ -77,12 +73,10 @@ def get_stats():
                 logger.error(f"MD Parse Error for {coin}: {str(e)} | Response keys: {list(r.keys())}")
                 return jsonify({"error": "Pool Data Parse Error"}), 502
 
-            # Block Timings
             blocks = 144
             if coin == 'DGB': blocks = 5760
             elif coin == 'FB': blocks = 2880
 
-            # Calc Hashrate
             target_time = 86400 / blocks
             calc_hash = (diff * 4294967296) / target_time
 
