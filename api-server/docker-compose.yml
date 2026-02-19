@@ -1,0 +1,9 @@
+services:
+  api-proxy:
+    build: .
+    container_name: solo_miner_proxy
+    restart: unless-stopped
+    ports:
+      - "9812:5000"
+    env_file:
+      - .env

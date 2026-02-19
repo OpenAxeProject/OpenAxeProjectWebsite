@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Axe Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="app.js"></script>
+    
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>OPEN AXE PROJECT</h1>
+        <span class="tagline">Open Source Knowledge for Open Source Hardware</span>
+        <p style="max-width: 600px; margin: 20px auto 40px auto;">
+            Dedicated to building open, transparent, and community-driven software that empowers Open Source Mining (OSM) devices.
+        </p>
+        <a href="https://github.com/orgs/OpenAxeProject/repositories" class="btn-main">OUR PROJECTS &rarr;</a>
+        <a href="/calculator/" class="btn-main">LUCK CALCULATOR &rarr;</a>
+        <a href="https://axeanswers.com" class="btn-main">AXEANSWERS | FAQ  &rarr;</a>
+    </div>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>Our Mission</h2>
+        <p>We believe open hardware deserves open software.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Support</h3>
+                <p>Enhance Open Source Mining (OSM) devices with reliable tooling.</p>
+            </div>
+            <div class="card">
+                <h3>Share</h3>
+                <p>Distribute knowledge freely to the global mining community.</p>
+            </div>
+            <div class="card">
+                <h3>Empower</h3>
+                <p>Enable individuals to run their hardware without proprietary barriers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Philosophy</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Open First</h3>
+                <p>All code, documentation, and tools are open source (MIT License).</p>
+            </div>
+            <div class="card">
+                <h3>Transparency</h3>
+                <p>No hidden functionality, no proprietary lock-in.</p>
+            </div>
+            <div class="card">
+                <h3>Utility</h3>
+                <p>Software that solves real operational problems for miners.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate">
+        <h2>Support the Project</h2>
+        <p>Your contributions help keep the Open Axe Project alive and growing.</p>
+        
+        <div class="donation-grid">
+            <div class="crypto-card">
+                <strong>BTC (Bitcoin)</strong>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qfcglqfnfquzclycmzlz3hq02l8cr5fe2vnmc8u" class="qr-code" alt="BTC QR">
+                <div class="crypto-addr" id="btc">bc1qfcglqfnfquzclycmzlz3hq02l8cr5fe2vnmc8u</div>
+                <button class="copy-btn" onclick="copy('btc')">Copy Address</button>
+            </div>
+
+            <div class="crypto-card">
+                <strong>BCH (Bitcoin Cash)</strong>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bitcoincash:qpve27m6cqw8nsz67kylmrg6g2t6favfrskk5ea2pn" class="qr-code" alt="BCH QR">
+                <div class="crypto-addr" id="bch">bitcoincash:qpve27m6cqw8nsz67kylmrg6g2t6favfrskk5ea2pn</div>
+                <button class="copy-btn" onclick="copy('bch')">Copy Address</button>
+            </div>
+
+            <div class="crypto-card">
+                <strong>DGB (DigiByte)</strong>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=DKARCJnsfKpUcSpyH9jDRCZQhiUAEZMwCm" class="qr-code" alt="DGB QR">
+                <div class="crypto-addr" id="dgb">DKARCJnsfKpUcSpyH9jDRCZQhiUAEZMwCm</div>
+                <button class="copy-btn" onclick="copy('dgb')">Copy Address</button>
+            </div>
+        </div>
+    </section>
+
+    <section style="text-align: center; margin-top: 80px;">
+        <h2>Join the Community</h2>
+        <p>We welcome contributions. Report issues, suggest features, or share knowledge on our GitHub.</p>
+        <a href="https://github.com/openaxeproject" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: bold; font-size: 1.1rem;">Visit GitHub &rarr;</a>
+    </section>
+
+</div>
+
+<footer>
+    &copy; <script>document.write(new Date().getFullYear())</script> Open Axe Project. Released under MIT License.
+</footer>
+
+<div id="toast">Copied to clipboard!</div>
+
+
+
+</body>
+</html>

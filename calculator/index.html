@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAxeProject Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+    <h2>OPENAXE CALCULATOR</h2>
+
+    <div class="config-grid">
+        <div>
+            <label>Select Coin</label>
+            <select id="coin">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="BCH">Bitcoin Cash (BCH)</option>
+                <option value="BSV">Bitcoin SV (BSV)</option>
+                <option value="DGB">Digibyte (DGB)</option>
+                <option value="FB">Fractal Bitcoin (FB)</option>
+                <option value="PPC">Peercoin (PPC)</option>
+                <option value="BC2">BitcoinII (BC2)</option>
+            </select>
+        </div>
+        <div>
+            <label>Elec. Cost ($/kWh)</label>
+            <input type="number" id="kwhCost" value="0.12" step="0.01">
+        </div>
+    </div>
+
+    <div class="hw-list" id="hwContainer"></div>
+
+    <button class="calc-btn" onclick="calculate()">CALCULATE</button>
+    <div id="statusBox" class="status-bar"></div>
+
+    <div class="stats-box">
+        <div class="row"><span>Network Hashrate:</span> <span id="netHash" class="val">-</span></div>
+        <div class="row"><span>Network Difficulty:</span> <span id="netDiff" class="val">-</span></div>
+        <div class="row"><span>Total Farm Power:</span> <span id="farmPower" class="val">0 TH/s</span></div>
+        <div class="row"><span>Total Energy Usage:</span> <span id="farmWatts" class="val">0 W</span></div>
+        
+        <hr>
+        
+        <div class="row"><span>Daily Elec. Cost:</span> <span id="dailyCost" class="val">$0.00</span></div>
+        <div class="row"><span>Monthly Elec. Cost:</span> <span id="monthlyCost" class="val">$0.00</span></div>
+        <div class="row"><span>Yearly Elec. Cost:</span> <span id="yearlyCost" class="val">$0.00</span></div>
+
+        <hr>
+
+        <div class="row major"><span>Est. Win (Daily):</span> <span id="oddsDaily" class="val">-</span></div>
+        <div class="row"><span>Est. Win (Monthly):</span> <span id="oddsMonthly" class="val">-</span></div>
+        <div class="row"><span>Est. Win (Yearly):</span> <span id="oddsYearly" class="val">-</span></div>
+    </div>
+
+    <h3>Perspective: The Lottery</h3>
+    <div class="pb-box">
+        <div class="pb-header">
+            <span class="pb-logo">POWERBALL</span>
+            <span id="pbJackpot" class="jackpot">Loading...</span>
+        </div>
+        
+        <div class="row">
+            <span>Jackpot Odds:</span>
+            <span class="val">1 in 292,201,338</span>
+        </div>
+        <div class="row">
+            <span>Your Mining Odds (Yearly):</span>
+            <span id="miningOddsComp" class="val">-</span>
+        </div>
+
+        <hr style="border-color: #333">
+
+        <div class="row">
+            <span>Lottery Cost (Yearly):</span>
+            <span class="val" style="color: #ffc107">$468.00</span>
+        </div>
+        <div class="row">
+            <span>Mining Elec. Cost (Yearly):</span>
+            <span id="miningCostComp" class="val">-</span>
+        </div>
+
+        <div class="pb-footer">
+            *Based on 3 drawings/week @ $3 per ticket (156 plays/year).
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

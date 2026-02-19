@@ -1,0 +1,26 @@
+----------------------------------------
+The
+ ____  ____  _____ _      ____ ___  _ _____
+/  _ \/  __\/  __// \  /|/  _ \\  \///  __/
+| / \||  \/||  \  | |\ ||| / \| \  / |  \  
+| \_/||  __/|  /_ | | \||| |-|| /  \ |  /_ 
+\____/\_/   \____\\_/  \|\_/ \|/__/\\\____\
+                                           Project
+"Open Source Knowledge for Open Source Hardware"
+----------------------------------------
+Contributors:
+
+cfultz - https://github.com/cfultz
+----------------------------------------
+
+Support the Project:
+
+BTC: 
+bc1qfcglqfnfquzclycmzlz3hq02l8cr5fe2vnmc8u
+
+BCH: 
+bitcoincash:qpve27m6cqw8nsz67kylmrg6g2t6favfrskk5ea2pn
+
+DGB: 
+DKARCJnsfKpUcSpyH9jDRCZQhiUAEZMwCm
+
