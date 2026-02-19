@@ -16,7 +16,7 @@ WHATSONCHAIN_KEY = os.environ.get("WHATSONCHAIN_KEY", "").strip()
 @app.route('/api/stats', methods=['GET'])
 def get_stats():
     coin = request.args.get('coin', 'BTC')
-    headers = {'User-Agent': 'SoloBlock-Proxy/1.0'}
+    headers = {'User-Agent': 'OpenAxeProject-Proxy/1.0'}
     
     try:
         if coin in ['BTC', 'BCH']:
