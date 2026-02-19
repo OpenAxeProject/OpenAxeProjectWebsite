@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Axe Project</title>
+    
+    <title>Open Axe Project | Open Source Mining Software & Tools</title>
+    <meta name="description" content="Dedicated to open source software for crypto mining hardware. Tools, luck calculators, and knowledge for Bitaxe, Nerdaxe, and the Open Source Mining (OSM) community.">
+    <meta name="keywords" content="Bitaxe, Nerdaxe, Solo Mining, Mining Calculator, Open Source Hardware, Bitcoin Mining, OSM, Crypto Tools, ASIC Mining">
+    <meta name="author" content="Open Axe Project">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://openaxeproject.org/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://openaxeproject.org/">
+    <meta property="og:title" content="Open Axe Project | Open Source Mining Tools">
+    <meta property="og:description" content="Empowering the Open Source Mining community with transparent software, solo mining calculators, and hardware documentation.">
+    <meta property="og:image" content="https://openaxeproject.org/og-image.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://openaxeproject.org/">
+    <meta property="twitter:title" content="Open Axe Project">
+    <meta property="twitter:description" content="Open Source Knowledge for Open Source Hardware. Tools for Bitaxe and OSM devices.">
+    <meta property="twitter:image" content="https://openaxeproject.org/og-image.jpg">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico">
-    <script src="app.js"></script>
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Open Axe Project",
+      "url": "https://openaxeproject.org",
+      "sameAs": [
+        "https://github.com/openaxeproject"
+      ],
+      "description": "Open Source Knowledge for Open Source Hardware. Dedicated to building software that empowers Open Source Mining (OSM) devices.",
+      "knowsAbout": ["Bitcoin Mining", "Open Source Hardware", "Bitaxe", "Software Development"]
+    }
+    </script>
+
+    <script src="app.js" defer></script>
 </head>
 <body>
 
@@ -16,85 +49,90 @@
         <h1>OPEN AXE PROJECT</h1>
         <span class="tagline">Open Source Knowledge for Open Source Hardware</span>
         <p style="max-width: 600px; margin: 20px auto 40px auto;">
-            Dedicated to building open, transparent, and community-driven software that empowers Open Source Mining (OSM) devices.
+            Dedicated to building open, transparent, and community-driven software that empowers Open Source Mining (OSM) devices like the Bitaxe and Nerdaxe.
         </p>
-        <a href="https://github.com/orgs/OpenAxeProject/repositories" class="btn-main">OUR PROJECTS &rarr;</a>
-        <a href="/calculator/" class="btn-main">LUCK CALCULATOR &rarr;</a>
-        <a href="https://axeanswers.com" class="btn-main">AXEANSWERS | FAQ  &rarr;</a>
+        
+        <nav aria-label="Main Navigation">
+            <a href="https://github.com/orgs/OpenAxeProject/repositories" class="btn-main" title="View our code on GitHub">OUR PROJECTS &rarr;</a>
+            <a href="/calculator/" class="btn-main" title="Calculate Solo Mining Odds">LUCK CALCULATOR &rarr;</a>
+            <a href="https://axeanswers.com" class="btn-main" title="Frequently Asked Questions">AXEANSWERS | FAQ &rarr;</a>
+        </nav>
     </div>
 </header>
 
 <div class="container">
 
-    <section>
-        <h2>Our Mission</h2>
-        <p>We believe open hardware deserves open software.</p>
-        <div class="grid">
-            <div class="card">
-                <h3>Support</h3>
-                <p>Enhance Open Source Mining (OSM) devices with reliable tooling.</p>
+    <main>
+        <section>
+            <h2>Our Mission</h2>
+            <p>We believe open hardware deserves open software.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Support</h3>
+                    <p>Enhance Open Source Mining (OSM) devices with reliable tooling and integration.</p>
+                </div>
+                <div class="card">
+                    <h3>Share</h3>
+                    <p>Distribute technical knowledge freely to the global mining community.</p>
+                </div>
+                <div class="card">
+                    <h3>Empower</h3>
+                    <p>Enable individuals to run their mining hardware without proprietary barriers.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Share</h3>
-                <p>Distribute knowledge freely to the global mining community.</p>
-            </div>
-            <div class="card">
-                <h3>Empower</h3>
-                <p>Enable individuals to run their hardware without proprietary barriers.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Philosophy</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Open First</h3>
-                <p>All code, documentation, and tools are open source (MIT License).</p>
+        <section>
+            <h2>Philosophy</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Open First</h3>
+                    <p>All code, documentation, and tools are open source (MIT License).</p>
+                </div>
+                <div class="card">
+                    <h3>Transparency</h3>
+                    <p>No hidden functionality, no proprietary lock-in, and full code auditing.</p>
+                </div>
+                <div class="card">
+                    <h3>Utility</h3>
+                    <p>Software that solves real operational problems for solo and pool miners.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Transparency</h3>
-                <p>No hidden functionality, no proprietary lock-in.</p>
-            </div>
-            <div class="card">
-                <h3>Utility</h3>
-                <p>Software that solves real operational problems for miners.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="donate">
-        <h2>Support the Project</h2>
-        <p>Your contributions help keep the Open Axe Project alive and growing.</p>
-        
-        <div class="donation-grid">
-            <div class="crypto-card">
-                <strong>BTC (Bitcoin)</strong>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qfcglqfnfquzclycmzlz3hq02l8cr5fe2vnmc8u" class="qr-code" alt="BTC QR">
-                <div class="crypto-addr" id="btc">bc1qfcglqfnfquzclycmzlz3hq02l8cr5fe2vnmc8u</div>
-                <button class="copy-btn" onclick="copy('btc')">Copy Address</button>
-            </div>
+        <section id="donate">
+            <h2>Support the Project</h2>
+            <p>Your contributions help keep the Open Axe Project alive and growing.</p>
+            
+            <div class="donation-grid">
+                <div class="crypto-card">
+                    <strong>BTC (Bitcoin)</strong>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qfcglqfnfquzclycmzlz3hq02l8cr5fe2vnmc8u" class="qr-code" alt="Bitcoin Donation QR Code" width="150" height="150">
+                    <div class="crypto-addr" id="btc">bc1qfcglqfnfquzclycmzlz3hq02l8cr5fe2vnmc8u</div>
+                    <button class="copy-btn" onclick="copy('btc')" aria-label="Copy Bitcoin Address">Copy Address</button>
+                </div>
 
-            <div class="crypto-card">
-                <strong>BCH (Bitcoin Cash)</strong>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bitcoincash:qpve27m6cqw8nsz67kylmrg6g2t6favfrskk5ea2pn" class="qr-code" alt="BCH QR">
-                <div class="crypto-addr" id="bch">bitcoincash:qpve27m6cqw8nsz67kylmrg6g2t6favfrskk5ea2pn</div>
-                <button class="copy-btn" onclick="copy('bch')">Copy Address</button>
-            </div>
+                <div class="crypto-card">
+                    <strong>BCH (Bitcoin Cash)</strong>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bitcoincash:qpve27m6cqw8nsz67kylmrg6g2t6favfrskk5ea2pn" class="qr-code" alt="Bitcoin Cash Donation QR Code" width="150" height="150">
+                    <div class="crypto-addr" id="bch">bitcoincash:qpve27m6cqw8nsz67kylmrg6g2t6favfrskk5ea2pn</div>
+                    <button class="copy-btn" onclick="copy('bch')" aria-label="Copy Bitcoin Cash Address">Copy Address</button>
+                </div>
 
-            <div class="crypto-card">
-                <strong>DGB (DigiByte)</strong>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=DKARCJnsfKpUcSpyH9jDRCZQhiUAEZMwCm" class="qr-code" alt="DGB QR">
-                <div class="crypto-addr" id="dgb">DKARCJnsfKpUcSpyH9jDRCZQhiUAEZMwCm</div>
-                <button class="copy-btn" onclick="copy('dgb')">Copy Address</button>
+                <div class="crypto-card">
+                    <strong>DGB (DigiByte)</strong>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=DKARCJnsfKpUcSpyH9jDRCZQhiUAEZMwCm" class="qr-code" alt="DigiByte Donation QR Code" width="150" height="150">
+                    <div class="crypto-addr" id="dgb">DKARCJnsfKpUcSpyH9jDRCZQhiUAEZMwCm</div>
+                    <button class="copy-btn" onclick="copy('dgb')" aria-label="Copy DigiByte Address">Copy Address</button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <section style="text-align: center; margin-top: 80px;">
         <h2>Join the Community</h2>
         <p>We welcome contributions. Report issues, suggest features, or share knowledge on our GitHub.</p>
-        <a href="https://github.com/openaxeproject" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: bold; font-size: 1.1rem;">Visit GitHub &rarr;</a>
+        <a href="https://github.com/openaxeproject" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; font-weight: bold; font-size: 1.1rem;">Visit GitHub &rarr;</a>
     </section>
 
 </div>
@@ -104,8 +142,6 @@
 </footer>
 
 <div id="toast">Copied to clipboard!</div>
-
-
 
 </body>
 </html>
